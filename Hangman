@@ -82,7 +82,7 @@ def start_game():
     user_word = '_' * len(word)
     tries = 5
     used_letters = []
-    print(user_word, word)
+    print(user_word)
     print()
     print("Введите букву")
     while user_word != word and tries != -1:
