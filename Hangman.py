@@ -77,7 +77,7 @@ def start_game():
     1: one_mistakes_left(),
     0: zero_mistakes_left()
 }
-    with open("dict.txt") as file:
+    with open("dict.txt", encoding="utf-8") as file:
         word = random.choice(file.readlines()).rstrip()
     user_word = '_' * len(word)
     tries = 5
@@ -102,6 +102,7 @@ def start_game():
                 continue
             print()
             print(f"Введенной буквы в слове нет. У вас осталось {tries} попыток")
+            print(user_word)
             print(dict_mistakes[tries])
             print()
             used_letters.append(letter)
